@@ -35,4 +35,9 @@ class ApplicationController < Sinatra::Base
     erb :'/users/login'
   end
 
+  post '/login' do
+     @user = User.create(params[:id])
+     
+  end 
+
 end
