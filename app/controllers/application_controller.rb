@@ -20,6 +20,7 @@ class ApplicationController < Sinatra::Base
       redirect to :'/signup'
     end
       @user = User.create(params)
+      sessions 
     redirect to :'/tweets'
   end
 
