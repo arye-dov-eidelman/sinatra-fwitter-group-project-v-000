@@ -13,7 +13,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/signup' do
-    binding.pry
+    if session[:user_id]
+      redirect :'/tweets'
+    end 
     erb :'/users/signup'
   end
 
