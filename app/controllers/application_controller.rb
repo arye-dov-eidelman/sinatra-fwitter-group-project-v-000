@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     if session[:user_id]
       redirect :'/tweets'
     end
-    erb :'/users/signup'
+    erb :'/login'
   end
 
 end
