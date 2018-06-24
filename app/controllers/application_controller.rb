@@ -13,6 +13,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/signup' do
+    binding.pry
     erb :'/users/signup'
   end
 
