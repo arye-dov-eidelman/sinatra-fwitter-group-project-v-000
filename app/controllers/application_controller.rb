@@ -36,9 +36,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-    binding.pry
      @user = User.create(params)
-
+     session[:id] = @user.id
   end
 
 end
