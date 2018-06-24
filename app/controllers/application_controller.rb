@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
+    enable :sessions
   end
 
   get '/' do
@@ -20,7 +21,7 @@ class ApplicationController < Sinatra::Base
       redirect to :'/signup'
     end
       @user = User.create(params)
-      sessions 
+      sessions
     redirect to :'/tweets'
   end
 
