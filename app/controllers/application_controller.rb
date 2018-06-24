@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
   get '/signup' do
     if session[:user_id]
       redirect :'/tweets'
-    end 
+    end
     erb :'/users/signup'
   end
 
@@ -28,5 +28,11 @@ class ApplicationController < Sinatra::Base
     redirect to :'/tweets'
   end
 
+  get '/login' do
+    if session[:user_id]
+      redirect :'/tweets'
+    end
+    erb :'/users/signup'
+  end
 
 end
