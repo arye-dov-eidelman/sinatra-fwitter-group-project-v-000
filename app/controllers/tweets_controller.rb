@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
 
 get '/tweets' do
+  binding.pry
   if !session[:user_id]
     redirect to '/login'
   else
